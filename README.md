@@ -2,12 +2,12 @@
 This github repo consist of all the paper I read while in YAHOO! JAPAN and a short summary of each paper for further usages. The purpose of the work was mainly to find a way to model user in a broader perspective. This repo is a private property of the author and Yahoo! JAPAN corporation.
 
 
-#1. Patterns of Search: Analyzing and Modeling Web Query
+# 1. Patterns of Search: Analyzing and Modeling Web Query
 Refinement, Tessa Lau
 and Eric Horvitz
 http://erichorvitz.com/queryrefine.pdf
 
-#2. Inferring the Demographics of Search Users
+# 2. Inferring the Demographics of Search Users
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.383.839&rep=rep1&type=pdf
 They plan to figure out the demographic of an user for instance, age gender based on two source datsets, one is the social dataset consisting of the facebook pages the user has liked and the other one is corresponding serach queries. They wanted to predict demographic but noted that training the model on query session data is not useful as most of the time it is not annotated. So they used a concept of transfer learning. They trained their model on the facebook's my personality dataset which contains the pages likes by a particular user and some demographic information. Then using this model to predict demographic on the query datset.
 1. They got the facebook data, which is labelled and query data which is not labelled.
