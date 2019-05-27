@@ -25,3 +25,19 @@ They plan to figure out the demographic of an user for instance, age gender base
 5. Trained a logit model with lasso regularization for age predcition.
 6. For gender prediction they used two different binary classifiers.
 7. The accuracy for gener classification was almost 85% while for age it was 75% on FB dataset and 80% and 70% respectively on the query dataset
+
+# 3. Implicit User Modeling for Personalized Search
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.61.918&rep=rep1&type=pdf
+Their model tried to model user behaviour, particularly their intents as a function of time. They plan to do it, solely on the basis of the query search data of the user over a time. The computation will be done on the client side hence reduces the burden on the servers. So basically they plan to rank the results shown for a particular query in a more personalized manner. For example "java map" could mean two entirely different things for a programmer and a traveller. Also a programmer can become a traveller too, so the results shown must update dynamically according to the present user model.
+1. They deisgned a decision theoretic model which has 3 tasks to do at every point of time.
+2. User model updating: Monitor any useful evidence from the user regarding
+his/her information need and update the user model as soon as such
+evidence is available.
+3. Improving search results: Rerank immediately all the documents that the user has not yet seen, as soon
+as the user model is updated.
+4. The user model m assumes to come from a distribution M. And corresponding to every request q, an action a has to be done such that it maxmizes the probability of "viewing/clicking" the data, or an action which has maximum relevancy for the user.
+5. So basically the task is to minimizes the loss which is L(q,a,m) and is function of the query, action taken and the user model at a particular time.
+6. As mentioned earlier, the updates on the user model "m" is dynamic and after every query it gets updates.
+
+
+
