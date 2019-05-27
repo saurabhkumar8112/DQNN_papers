@@ -2,10 +2,17 @@
 This github repo consist of all the paper I read while in YAHOO! JAPAN and a short summary of each paper for further usages. The purpose of the work was mainly to find a way to model user in a broader perspective. This repo is a private property of the author and Yahoo! JAPAN corporation.
 
 
-# 1. Patterns of Search: Analyzing and Modeling Web Query
-Refinement, Tessa Lau
-and Eric Horvitz
-http://erichorvitz.com/queryrefine.pdf
+# 1. Neural Demographic Prediction using Search Query
+https://dl.acm.org/citation.cfm?id=3291034
+
+The basic idea of the paper is to model user based on his/her demographic for better personalize search experience.They employ a deep learning based approach to classify the user into certain demographic aspects given his/her search history. They learn the user representation using his query over a time, and then classify him/her based on demographics such as gender or age. They have three main structures inside their model, a word encoder a query encoder and a classifier.
+1. They take individual words of a query and learn its embedding through standard NLP methodologies like word2vec to learn a 200 dimensional vector representation of a word.
+2. The they pass it through a convolution layer to capture the local context of every word in the query.
+3. Then they pass it through an attention model. This constitutes the word encoder.
+4. The output of attention network is feeded again to a CNN layer to capture the context of queries.
+5. Then it is passed through an attention network.
+6. Since all the previous queries have some importance while deciding the demographic, they use an attention model to capture that importance.
+7. In the end they pass it to a classifier.
 
 # 2. Inferring the Demographics of Search Users
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.383.839&rep=rep1&type=pdf
