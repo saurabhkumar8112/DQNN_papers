@@ -53,9 +53,13 @@ https://arxiv.org/pdf/1408.5882.pdf
 This paper tries to show the power of CNNs in tasks such as text classification under the usual setting of CNN. After learning embedding using standard techniques like word2veq from a vocabulary table, a sequence of words is represented as a matrix or an image in 2D form. For example, representation of a word becomes a row and you stack representation(word2veq) below the representation of previous word's representation to make a 2D matrix or image like structure. 
 For eg, 
 i     ------[a1,a2,......,an]
+
 don't ------[b1,b2,......,bn]
+
 like  ------[c1,c2,......,cn]
+
 food  ------[d1,d2,......,dn]
+
 The structure is used with usual padding wherever needed.
 1. Learn the embedding using standard embedding techniques.
 2. Representation sequence as a 2@ matrix or image
