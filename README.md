@@ -41,5 +41,31 @@ as the user model is updated.
 5. So basically the task is to minimizes the loss which is L(q,a,m) and is function of the query, action taken and the user model at a particular time.
 6. As mentioned earlier, the updates on the user model "m" is dynamic and after every query it gets updates.
 
+# 4. Text Classification Research with Attention-based Recurrent Neural Networks, C. Du, L. Huang
+In this paper they propose a classification model for classifying texts using the concept of attention on top of an RNN like structure. The attention model is followed by a classifier, which gives output as a softmax function.
+1. They use Bidirectional LSTM after an embedding as an usual setting to learn the context of a sequence of characater or a senetence to be precise.
+2. On top of that they use attention model, which outputs weights or priority to a gives section of sequence.
+3. This structure is followed by a softmax classifier
+4. The loss function used is a negative of log-liklihood with an L2 regularizer.
+
+# 5. Convolutional Neural Networks for Sentence Classification
+https://arxiv.org/pdf/1408.5882.pdf
+This paper tries to show the power of CNNs in tasks such as text classification under the usual setting of CNN. After learning embedding using standard techniques like word2veq from a vocabulary table, a sequence of words is represented as a matrix or an image in 2D form. For example, representation of a word becomes a row and you stack representation(word2veq) below the representation of previous word's representation to make a 2D matrix or image like structure. 
+For eg, 
+i     ------[a1,a2,......,an]
+don't ------[b1,b2,......,bn]
+like  ------[c1,c2,......,cn]
+food  ------[d1,d2,......,dn]
+The structure is used with usual padding wherever needed.
+1. Learn the embedding using standard embedding techniques.
+2. Representation sequence as a 2@ matrix or image
+3. Use kernels for calculating convolution as ususal
+4. Make a dense layer
+5. Then classify using a softmax layer
+
+# 6. Attention-Based Bidirectional Long Short-Term Memory Networks for Relation Classification
+This paper is similar to the paper mentioned in [4]. The architecture, the model and the approach is exactly same. I don't know how both of the papers got published. The only difference is the task on which the model is used.
+
+
 
 
