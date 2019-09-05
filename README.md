@@ -70,7 +70,7 @@ The structure is used with usual padding wherever needed.
 5. Then classify using a softmax layer
 
 # 6. Attention-Based Bidirectional Long Short-Term Memory Networks for Relation Classification
-This paper is similar to the paper mentioned in [4]. The architecture, the model and the approach is exactly same. I don't know how both of the papers got published. The only difference is the task on which the model is used. Even the loss function is exactly same.
+This paper is similar to the paper mentioned in [4]. The architecture, the model and the approach is exactly same. I don't know how both of the papers got published. The only difference is the task on which the model is used. Even the loss function is exactly same.But using a BiLSTM gives better results because of context summarization.
 
 
 
